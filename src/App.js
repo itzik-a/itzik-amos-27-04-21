@@ -42,8 +42,8 @@ const App = () => {
           {error && <Toast />}
           <Header />
           <Switch>
-            <Route exact path="/" component={Home} />
             <Route path="/favorites" component={Favorites} />
+            <Route path="/" component={Home} />
           </Switch>
         </Paper>
       </Router>
