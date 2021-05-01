@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect, useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import Grid from "@material-ui/core/Grid";
 import SearchIcon from "@material-ui/icons/Search";
@@ -7,31 +7,57 @@ import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 
 import SearchList from "../SearchList";
 import { getWeatherState } from "../../redux/selectors";
-import { getSearchResults, setSearchResults } from "../../redux/actions";
+import {
+  getSearchResults,
+  setError,
+  setSearchResults,
+} from "../../redux/actions";
 import useStyles from "./styles";
+import { useDebounce } from "../../utils";
 
 const SearchBox = () => {
   const classes = useStyles();
   const dispatch = useDispatch();
   const { searchResults } = useSelector(getWeatherState);
   const inputRef = useRef();
+  const [query, setQuery] = useState("");
 
-  const onInputChange = ({ target: { value } }) => {
-    if (value.trim() === "") {
-      dispatch(setSearchResults([]));
-    } else {
-      dispatch(getSearchResults(value));
-    }
-  };
+  useDebounce(
+    () => {
+      const onlyEnglishLetters = /^[a-zA-Z]+$/;
 
-  const onClickAway = () => {
+      if (query.trim() === "") {
+        dispatch(setSearchResults([]));
+      } else if (onlyEnglishLetters.test(query)) {
+        dispatch(getSearchResults(query));
+      } else {
+        dispatch(setError("Please use English letters only."));
+      }
+    },
+    300,
+    [query]
+  );
+
+  const onInputChange = ({ target: { value } }) => setQuery(value);
+
+  const onClickAway = useCallback(() => {
     if (searchResults.length > 0) {
       dispatch(setSearchResults([]));
     }
-  };
+  }, [dispatch, searchResults]);
+
+  useEffect(() => {
+    const listener = document.addEventListener("keydown", ({ key }) => {
+      if (key === "Escape") {
+        onClickAway();
+      }
+    });
+
+    return () => document.removeEventListener("keydown", listener);
+  }, [onClickAway]);
 
   return (
-    <Grid container>
+    <Grid container className={classes.container}>
       <Grid item xs={12} className={classes.search}>
         <div className={classes.searchIcon}>
           <SearchIcon />

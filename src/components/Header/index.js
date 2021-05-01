@@ -59,12 +59,14 @@ const Header = () => {
             Herolo Weather
           </Link>
         </Box>
-        <Link to="/" className={classes.link}>
-          Home
-        </Link>
-        <Link to="/favorites" className={classes.link}>
-          Favorites
-        </Link>
+        <div className={classes.links}>
+          <Link to="/" className={classes.link}>
+            Home
+          </Link>
+          <Link to="/favorites" className={classes.link}>
+            Favorites
+          </Link>
+        </div>
         {toggleTempUnitButton}
         {toggleDarkModeButton}
       </Toolbar>

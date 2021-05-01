@@ -16,7 +16,7 @@ const Toast = () => {
   useEffect(() => {
     const handlerTimeout = setTimeout(() => {
       dispatch(setError(null));
-    }, 6000);
+    }, 5000);
 
     return () => clearTimeout(handlerTimeout);
   }, [dispatch]);

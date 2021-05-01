@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-export default makeStyles(() => ({
+export default makeStyles((theme) => ({
   toolbar: {
     flexGrow: 1,
   },
@@ -10,6 +10,11 @@ export default makeStyles(() => ({
     fontWeight: 700,
     textDecoration: "none",
     marginLeft: 12,
+  },
+  links: {
+    [theme.breakpoints.down("xs")]: {
+      flexGrow: 1,
+    },
   },
   link: {
     color: "inherit",
