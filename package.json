@@ -2,6 +2,7 @@
   "name": "itzik-amos-27-04-21",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://itzik-a.github.io/itzik-amos-27-04-21",
   "dependencies": {
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",
@@ -23,7 +24,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -44,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^3.1.0",
     "redux-logger": "^3.0.6"
   }
 }
