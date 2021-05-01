@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/itzik-amos-27-04-21/static/css/main.40e7c8ac.chunk.css",
-    "main.js": "/itzik-amos-27-04-21/static/js/main.d8dc80de.chunk.js",
-    "main.js.map": "/itzik-amos-27-04-21/static/js/main.d8dc80de.chunk.js.map",
+    "main.js": "/itzik-amos-27-04-21/static/js/main.af7fe2de.chunk.js",
+    "main.js.map": "/itzik-amos-27-04-21/static/js/main.af7fe2de.chunk.js.map",
     "runtime-main.js": "/itzik-amos-27-04-21/static/js/runtime-main.958ee6d1.js",
     "runtime-main.js.map": "/itzik-amos-27-04-21/static/js/runtime-main.958ee6d1.js.map",
     "static/js/2.59d646ac.chunk.js": "/itzik-amos-27-04-21/static/js/2.59d646ac.chunk.js",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.958ee6d1.js",
     "static/js/2.59d646ac.chunk.js",
     "static/css/main.40e7c8ac.chunk.css",
-    "static/js/main.d8dc80de.chunk.js"
+    "static/js/main.af7fe2de.chunk.js"
   ]
 }
