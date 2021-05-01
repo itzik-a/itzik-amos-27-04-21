@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/itzik-amos-27-04-21/static/css/main.40e7c8ac.chunk.css",
+    "main.js": "/itzik-amos-27-04-21/static/js/main.4d1fbb3c.chunk.js",
+    "main.js.map": "/itzik-amos-27-04-21/static/js/main.4d1fbb3c.chunk.js.map",
+    "runtime-main.js": "/itzik-amos-27-04-21/static/js/runtime-main.958ee6d1.js",
+    "runtime-main.js.map": "/itzik-amos-27-04-21/static/js/runtime-main.958ee6d1.js.map",
+    "static/js/2.2c210420.chunk.js": "/itzik-amos-27-04-21/static/js/2.2c210420.chunk.js",
+    "static/js/2.2c210420.chunk.js.map": "/itzik-amos-27-04-21/static/js/2.2c210420.chunk.js.map",
+    "index.html": "/itzik-amos-27-04-21/index.html",
+    "static/css/main.40e7c8ac.chunk.css.map": "/itzik-amos-27-04-21/static/css/main.40e7c8ac.chunk.css.map",
+    "static/js/2.2c210420.chunk.js.LICENSE.txt": "/itzik-amos-27-04-21/static/js/2.2c210420.chunk.js.LICENSE.txt",
+    "static/media/15.png": "/itzik-amos-27-04-21/static/media/15.9aac7942.png",
+    "static/media/16.png": "/itzik-amos-27-04-21/static/media/16.02f6796a.png",
+    "static/media/17.png": "/itzik-amos-27-04-21/static/media/17.4b8d4543.png",
+    "static/media/41.png": "/itzik-amos-27-04-21/static/media/41.da896071.png",
+    "static/media/celsius.png": "/itzik-amos-27-04-21/static/media/celsius.9aefe468.png",
+    "static/media/fahrenheit.png": "/itzik-amos-27-04-21/static/media/fahrenheit.7259fb3c.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.958ee6d1.js",
+    "static/js/2.2c210420.chunk.js",
+    "static/css/main.40e7c8ac.chunk.css",
+    "static/js/main.4d1fbb3c.chunk.js"
+  ]
+}
