@@ -24,7 +24,7 @@ const SearchBox = () => {
 
   useDebounce(
     () => {
-      const onlyEnglishLetters = /^[a-zA-Z]+$/;
+      const onlyEnglishLetters = /^[a-zA-Z\s]*$/;
 
       if (query.trim() === "") {
         dispatch(setSearchResults([]));

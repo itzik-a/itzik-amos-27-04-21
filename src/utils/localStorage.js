@@ -1,4 +1,4 @@
-const HEROLO_WEATHER = "heroloWeather";
+const HEROLO_WEATHER = "heroloWeatherItzikAmos";
 
 const initialState = {
   favorites: [],
