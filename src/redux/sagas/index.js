@@ -7,6 +7,7 @@ import {
   setFiveDayForecast,
   getCurrentConditions,
   setSearchResults,
+  setError,
 } from "../actions";
 import {
   getCurrentConditions as getCurrentConditionsApi,
@@ -33,7 +34,9 @@ function* watchGetCurrentConditions({
     yield put(setCurrentConditions(currentConditions));
     yield put(setFiveDayForecast(fiveDayForecast));
   } catch (e) {
-    // handle errors!!!
+    if (e.Message) {
+      yield put(setError(e.Message));
+    }
     console.error(e);
   }
 }
@@ -49,7 +52,9 @@ function* watchGetLocalCurrentConditions({ payload }) {
       })
     );
   } catch (e) {
-    // handle errors!!!
+    if (e.Message) {
+      yield put(setError(e.Message));
+    }
     console.error(e);
   }
 }
@@ -83,6 +88,9 @@ function* watchGetSearchResults({ payload }) {
     const searchResults = yield call(getSearchResults, payload);
     yield put(setSearchResults(searchResults));
   } catch (e) {
+    if (e.Message) {
+      yield put(setError(e.Message));
+    }
     console.error(e);
   }
 }
