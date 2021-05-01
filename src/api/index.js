@@ -7,12 +7,12 @@ import axios from "axios";
 // } from "./mock-data";
 
 const apiKey = "dkwOxqz9SlENvLWhuRuYrEAzAIi3ayAI";
-const baseUrl = "http://dataservice.accuweather.com";
+const baseUrl = "https://dataservice.accuweather.com";
 
 export const getLocation = async ({ latitude, longitude }) => {
   try {
     const { data } = await axios.get(
-      `http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${apiKey}&q=${latitude},${longitude}&toplevel=true`
+      `${baseUrl}/v1/cities/geoposition/search?apikey=${apiKey}&q=${latitude},${longitude}&toplevel=true`
     );
     return data;
     // return location;

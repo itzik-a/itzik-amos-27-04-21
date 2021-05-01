@@ -37,7 +37,7 @@ const FavoriteCard = ({ id, name, text, icon, tempValue }) => {
           {name}
         </Typography>
         <Typography component="h6" variant="h6" color="textSecondary">
-          {`${tempValue}°`}
+          {`${parseInt(tempValue)}°`}
         </Typography>
       </CardContent>
       <CardMedia className={classes.cover} image={icon} />
